@@ -1,4 +1,4 @@
-# Copyright (C) 2012 The CyanogenMod Project
+# Copyright (C) 2013 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,7 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 #
 # This file is the build configuration for a full Android
 # build for toro hardware. This cleanly combines a set of
@@ -21,15 +20,16 @@
 # lines, full and toro, hence its name.
 #
 
-# Inherit from those products. Most specific first.
+# inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
-$(call inherit-product, device/samsung/n8013/n8013.mk)
+$(call inherit-product, device/samsung/n801x/n801x.mk)
 
-# Discard inherited values and use our own instead.
-PRODUCT_NAME := full_n8013
-PRODUCT_DEVICE := n8013
+# discard inherited values and use our own instead.
+PRODUCT_NAME := full_n801x
+PRODUCT_DEVICE := n801x
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := GT-N8013
+PRODUCT_MODEL := GT-N801x
